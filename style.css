@@ -1,0 +1,24 @@
+:root { --primary: #2563eb; --success: #10b981; --danger: #ef4444; --dark: #0f172a; }
+body { font-family: 'Inter', sans-serif; background: #f8fafc; margin: 0; user-select: none; }
+
+/* UI Components */
+.modal-bg { position: fixed; inset: 0; background: var(--dark); display: flex; align-items: center; justify-content: center; z-index: 1000; }
+.login-card { background: white; padding: 40px; border-radius: 16px; width: 320px; text-align: center; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); }
+.login-card input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #e2e8f0; border-radius: 8px; box-sizing: border-box; }
+
+.dashboard { display: none; flex-direction: column; min-height: 100vh; }
+header { background: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; }
+
+.content { padding: 20px; max-width: 800px; margin: 0 auto; width: 100%; box-sizing: border-box; }
+.card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 20px; border-left: 5px solid var(--primary); }
+
+.badge-timer { background: var(--dark); color: white; padding: 8px 16px; border-radius: 20px; font-weight: bold; position: fixed; bottom: 20px; right: 20px; }
+.badge-warning { background: var(--danger); color: white; padding: 8px 16px; border-radius: 20px; font-weight: bold; position: fixed; bottom: 20px; left: 20px; }
+
+.btn-primary { background: var(--primary); color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: bold; width: 100%; }
+.opsi-item { display: block; padding: 15px; border: 1px solid #f1f5f9; margin: 10px 0; border-radius: 10px; cursor: pointer; transition: 0.2s; }
+.opsi-item:hover { background: #eff6ff; border-color: var(--primary); }
+
+#loader { position: fixed; inset: 0; background: rgba(255,255,255,0.9); z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.spinner { width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }

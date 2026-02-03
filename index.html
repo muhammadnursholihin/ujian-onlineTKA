@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TKA CLOUD SYSTEM PRO 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body oncontextmenu="return false" oncopy="return false" oncut="return false" onpaste="return false">
+
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>Menghubungkan ke Cloud...</p>
+    </div>
+
+    <div id="login-overlay" class="modal-bg">
+        <div class="login-card">
+            <i class="fas fa-cloud-upload-alt fa-3x" style="color: var(--primary); margin-bottom: 20px;"></i>
+            <h2>TKA CLOUD 2026</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="prosesLogin()" class="btn-primary">Masuk Ujian</button>
+        </div>
+    </div>
+
+    <div class="dashboard" id="main-dashboard">
+        <header>
+            <div style="font-weight: bold; color: var(--primary);"><i class="fas fa-user-circle"></i> <span id="user-display"></span></div>
+            <button onclick="location.reload()" style="background:none; border:none; color:var(--danger); cursor:pointer;"><i class="fas fa-sign-out-alt"></i> Keluar</button>
+        </header>
+
+        <main class="content">
+            <div id="welcome-screen" style="text-align: center; padding-top: 50px;">
+                <i class="fas fa-file-signature fa-4x" style="color: #cbd5e1; margin-bottom: 20px;"></i>
+                <h3>Siap untuk memulai ujian?</h3>
+                <p>Pastikan koneksi internet stabil dan jangan meninggalkan halaman ujian.</p>
+                <button onclick="startUjian()" class="btn-primary" style="max-width: 200px;">Mulai Sekarang</button>
+            </div>
+
+            <div id="ujian-screen" style="display: none;">
+                <div id="render-soal"></div>
+                <button onclick="confirmSubmit()" class="btn-primary" style="margin-top: 20px; background: var(--success);">Kirim Jawaban</button>
+            </div>
+        </main>
+
+        <div id="timer-box" class="badge-timer" style="display: none;">00:00</div>
+        <div id="warning-box" class="badge-warning" style="display: none;">Pelanggaran: 0</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

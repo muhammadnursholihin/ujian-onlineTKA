@@ -1,4 +1,4 @@
-const URL_CLOUD = "https://script.google.com/macros/s/AKfycbwRRgmb0-P4czCR_GtRjbM2I-8rL2PvST_jJmqcTRHMZvzU1JUeU2hL6EG9OK3AoH72wQ/execEB_APP_ANDA_DI_SINI"; 
+const URL_CLOUD = "https://script.google.com/macros/s/AKfycbzAVOv9WvXOUFHp_Sgn4CSGRY6HD-Ued6h_WzQOeB5aXvkIRqN7faU2bHsqnX965EeKpQ/exec"; 
 const TOKEN_WAJIB = "TKA26"; 
 
 let bankSoal = [], cloudSiswa = [], currentUser = null;
@@ -145,4 +145,5 @@ async function kirimKeCloud(statusManual) {
 
     alert("Ujian Selesai! Nilai Anda: " + skorFinal);
     location.reload();
+
 }
